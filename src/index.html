@@ -1,0 +1,53 @@
+<!doctype html>
+<html dir="ltr" lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Weixin Mock</title>
+    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="mockframe.css">
+</head>
+<body>
+<div id="main">
+    <div id="topbar"></div>
+    <header>
+        <h1>微信模拟工具</h1>
+        <div class="menu">
+            <div class="reload">刷新</div>
+            <div class="down">下拉</div>
+            <ul>
+                <li data-id="timeline">分享到朋友圈</li>
+                <li data-id="appmessage">分享给好友</li>
+                <li data-id="weibo">分享到微博</li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+        <div id="start">
+            <form action="#" method="get">
+                <input type="url" id="url" placeholder="http://" autocomplete="off">
+                <button type="submit">进入</button>
+            </form>
+        </div>
+        <iframe id="view" src="" frameborder="0"></iframe>
+        <div id="share">
+            <div class="dialog dialog-weixin">
+                <h2 class="hd"></h2>
+                <div class="bd"><img src="" height="60" width="60"><p></p></div>
+                <p class="tips">来自：<span class="from"></span>，分享到：<span class="to"></span></p>
+                <p class="info">分享链接：<span></span></p>
+                <div class="btns"><button data-type="cancel">取消</button><button data-type="ok">分享</button></div>
+            </div>
+            <div class="dialog dialog-weibo">
+                <h2>分享到微博</h2>
+                <div class="bd"><p></p></div>
+                <p class="info">分享链接：<span></span></p>
+                <div class="btns"><button data-type="cancel">取消</button><button data-type="ok">分享</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="libs/jquery-2.0.0.min.js"></script>
+<script src="libs/EventEmitter.min.js"></script>
+<script src="mockframe.js"></script>
+</body>
+</html>
