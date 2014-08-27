@@ -157,7 +157,7 @@ var weixinMock = (function () {
     emitter.on('handshake', function (msg) {
         if (msg === 'd58de73563f88d88e0f4dfe33f9fce87') {
             try {
-                sendMessage('handshake', msg);
+                sendMessage('handshake', '983b5580d9e09080f9ae5162d9397689'); // md5(msg);
             } catch (e) {}
         }
     });
